@@ -1,6 +1,6 @@
-package com.geertjankuip.texthandling;
+package main.java.com.geertjankuip.texthandling;
 
-import com.geertjankuip.logging.ActivityLogger;
+import main.java.com.geertjankuip.logging.ActivityLogger;
 
 import javax.swing.*;
 import java.io.BufferedReader;
@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 public class TextFileReader {
 
@@ -50,7 +51,6 @@ public class TextFileReader {
 
         return(new TextDataContainer(allLineStrings, allPositions, path));
     }
-
 
 
     private void readTextFile() {
@@ -301,10 +301,6 @@ public class TextFileReader {
         positions.set(positions.size()-1, pos);
     }
 
-    private void remove(int pos) {
-        positions.remove(positions.size() -1);
-    }
-
     private boolean isValidPositionsArray(int lineLength) {
         boolean isEven = ((positions.size())%2 == 0);
 
@@ -321,7 +317,6 @@ public class TextFileReader {
         if (positions.size()>1) {
             isWithinLine = (positions.get(positions.size()-1) <= lineLength);
         }
-
 
         if (!isEven || !isAscending || !isWithinLine) {
             return false;

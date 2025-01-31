@@ -1,13 +1,10 @@
-package com.geertjankuip.graphics2dpanel;
+package main.java.com.geertjankuip.graphics2dpanel;
 
 import java.awt.*;
 
 public class NodeDrawing {
 
-    //nodeDrawScaleFactor, nodeDrawWidth, nodeDrawHeight,nodeTextSize,nodeColor,textColor1
-
     public NodeDrawing(Graphics2D g2D, NodeObject i, float nodeDrawScaleFactor, int nodeDrawWidth, int nodeDrawHeight, int nodeTextSize, Color nodeColor, Color typeColor1, Color typeColor2 ) {
-
 
         int w = (int) (nodeDrawScaleFactor * nodeDrawWidth);
         int h = (int) (nodeDrawScaleFactor * nodeDrawHeight);
@@ -32,12 +29,6 @@ public class NodeDrawing {
         int lw = (int) (4 * nodeDrawScaleFactor);
         g2D.setStroke(new BasicStroke( lw ));
         g2D.drawLine((int) i.x-w/2+3, (int) (i.y + h/2 - lw/2), (int) i.x+w/2-3, (int) (i.y + h/2 - lw/2));
-
-
-
-        //
-
-
     }
 
 }

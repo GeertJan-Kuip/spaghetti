@@ -1,9 +1,9 @@
-package com.geertjankuip.texthandling;
+package main.java.com.geertjankuip.texthandling;
 
 import java.io.File;
 
-public class FileDataContainer {
 
+public class FileDataContainer {
 
     Integer id;
     Boolean isFile;
@@ -45,7 +45,4 @@ public class FileDataContainer {
 
         return(this.isProcessed);
     }
-
-
-
 }

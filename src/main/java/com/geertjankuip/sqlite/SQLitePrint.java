@@ -1,4 +1,4 @@
-package com.geertjankuip.sqlite;
+package main.java.com.geertjankuip.sqlite;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

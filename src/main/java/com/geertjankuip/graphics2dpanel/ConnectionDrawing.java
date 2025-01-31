@@ -1,4 +1,4 @@
-package com.geertjankuip.graphics2dpanel;
+package main.java.com.geertjankuip.graphics2dpanel;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -93,6 +93,5 @@ public class ConnectionDrawing {
         g2D.fill(shape);
 
         g2D.draw(shape);
-
     }
 }

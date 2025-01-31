@@ -1,6 +1,6 @@
-package com.geertjankuip.gui;
+package main.java.com.geertjankuip.gui;
 
-import com.geertjankuip.logging.MyLogger;
+import main.java.com.geertjankuip.logging.MyLogger;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -75,15 +75,12 @@ public class GUI implements ActionListener{
     private JButton myButton31;
     private JButton myButton32;
 
-
     private JScrollPane dialogScrollPane;
     private JDialog dialog;
     private JPanel dialogPane;
     private JTextPane dialogTextPane;
 
     private MyLogger logger;
-
-
 
 
     public GUI() {
@@ -337,8 +334,6 @@ public class GUI implements ActionListener{
         CardLayout cl = (CardLayout)(myJPanelCardsTopRight.getLayout());
         cl.show(myJPanelCardsTopRight, "cardGraphics");
         myJPanelCard3.add(myGraphicsPanel, BorderLayout.CENTER);
-
-
     }
 
     public void showWarning(String str) {

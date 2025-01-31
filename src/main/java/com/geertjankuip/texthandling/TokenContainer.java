@@ -1,5 +1,4 @@
-package com.geertjankuip.texthandling;
-
+package main.java.com.geertjankuip.texthandling;
 
 public class TokenContainer {
 
@@ -14,9 +13,5 @@ public class TokenContainer {
         this.pos=pos;
         this.color=color;
         this.representation = representation;
-
-
     }
-
-
 }

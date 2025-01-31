@@ -1,11 +1,8 @@
-package com.geertjankuip.texthandling;
+package main.java.com.geertjankuip.texthandling;
 
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.sqlite.SQLiteWriter;
+import main.java.com.geertjankuip.logging.ActivityLogger;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class TextHandler {
@@ -31,8 +28,6 @@ public class TextHandler {
 
         for (FileDataContainer item : files) {
 
-
-
             String fullName = item.getFileObject().getPath();
             String lastFive = fullName.substring(fullName.length()-5, fullName.length());
 
@@ -52,8 +47,4 @@ public class TextHandler {
 
         return singleFileData;
     }
-
-
-
-
 }

@@ -1,9 +1,8 @@
-package com.geertjankuip.sqlite;
+package main.java.com.geertjankuip.sqlite;
 
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.logging.MyLogger;
-import com.geertjankuip.texthandling.FileDataContainer;
-import com.geertjankuip.texthandling.TextDataContainer;
+import main.java.com.geertjankuip.logging.ActivityLogger;
+import main.java.com.geertjankuip.texthandling.FileDataContainer;
+import main.java.com.geertjankuip.texthandling.TextDataContainer;
 
 import javax.swing.*;
 import java.sql.*;
@@ -130,7 +129,6 @@ public class SQLiteWriter {
         HashMap<String, Integer> retVal = new HashMap<>();
         String query = "SELECT id, path FROM files;";
 
-
         Statement stmnt = connection.createStatement();
         ResultSet res = stmnt.executeQuery(query);
         connection.commit();
@@ -160,7 +158,6 @@ public class SQLiteWriter {
             preparedStatement.close();
         }
         connection.commit();
-
 
         SwingUtilities.invokeLater(new Runnable() {
             public void run(){
@@ -195,7 +192,6 @@ public class SQLiteWriter {
 
             preparedStatement.execute();
             preparedStatement.close();
-
         }
 
         connection.commit();
@@ -228,8 +224,6 @@ public class SQLiteWriter {
             filePath = k.getPath();
             fileIndex = pathLookUpID.get(filePath);
 
-
-
             for (int j = 0; j < allPositions.size(); j++) {
 
                 ArrayList<Integer> positions = allPositions.get(j);
@@ -247,11 +241,6 @@ public class SQLiteWriter {
                 }
             }
         }
-
-
-
-
-
 
         for (TokenInsert i : allTokens) {
 

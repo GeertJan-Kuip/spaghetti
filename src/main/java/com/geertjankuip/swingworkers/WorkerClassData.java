@@ -1,25 +1,23 @@
-package com.geertjankuip.swingworkers;
+package main.java.com.geertjankuip.swingworkers;
 
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.sqlite.ClassContainer;
-import com.geertjankuip.sqlite.SQLiteReader;
-import com.geertjankuip.sqlite.SQLiteWriter;
+import main.java.com.geertjankuip.logging.ActivityLogger;
+import main.java.com.geertjankuip.sqlite.ClassContainer;
+import main.java.com.geertjankuip.sqlite.SQLiteReader;
+import main.java.com.geertjankuip.sqlite.SQLiteWriter;
 
 import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class WorkerClassData extends SwingWorker<String, String>{
 
     ActivityLogger logger;
 
-
     public WorkerClassData(ActivityLogger logger) {
 
         this.logger = logger;
     }
-
 
     @Override
     protected String doInBackground() throws Exception {

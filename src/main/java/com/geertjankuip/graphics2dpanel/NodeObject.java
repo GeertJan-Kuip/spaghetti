@@ -1,4 +1,4 @@
-package com.geertjankuip.graphics2dpanel;
+package main.java.com.geertjankuip.graphics2dpanel;
 
 public class NodeObject {
 
@@ -11,7 +11,6 @@ public class NodeObject {
     boolean isInterface;
     public String name;
 
-
     public NodeObject(double x, double y, int size, int classID, boolean isInterface, String name) {
 
         this.x = x;
@@ -21,7 +20,4 @@ public class NodeObject {
         this.isInterface = isInterface;
         this.name = name;
     }
-
-
-
 }

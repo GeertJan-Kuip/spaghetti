@@ -1,8 +1,6 @@
-package com.geertjankuip.texthandling;
+package main.java.com.geertjankuip.texthandling;
 
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.logging.MyLogger;
-//import org.jetbrains.annotations.NotNull;
+import main.java.com.geertjankuip.logging.ActivityLogger;
 
 import javax.swing.*;
 import java.io.*;
@@ -15,11 +13,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
 public class DirectoryReader {
 
     private ArrayList<FileDataContainer> files = new ArrayList<>();
 
     private ActivityLogger logger;
+
 
     public DirectoryReader(ActivityLogger logger) {
 
@@ -34,7 +34,6 @@ public class DirectoryReader {
         } else {
             return false;
         }
-
     }
 
     public ArrayList<FileDataContainer> getFileArray() {
@@ -100,6 +99,7 @@ public class DirectoryReader {
                 i.parent = newParentId;
             }
         }
+
         logNumberOfFoldersAndFiles();
     }
 

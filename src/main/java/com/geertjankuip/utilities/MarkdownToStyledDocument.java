@@ -1,4 +1,4 @@
-package com.geertjankuip.utilities;
+package main.java.com.geertjankuip.utilities;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultStyledDocument;
@@ -6,9 +6,9 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import java.awt.*;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 public class MarkdownToStyledDocument {
 
@@ -56,7 +56,6 @@ public class MarkdownToStyledDocument {
         }
 
         return(doc);
-
     }
 
     private static List<Object> convertLineToStyledDoc(String line){
@@ -95,6 +94,4 @@ public class MarkdownToStyledDocument {
 
         return(returnValue);
     }
-
-
 }

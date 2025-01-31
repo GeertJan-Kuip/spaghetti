@@ -1,15 +1,15 @@
-package com.geertjankuip.swingworkers;
+package main.java.com.geertjankuip.swingworkers;
 
-import com.geertjankuip.gui.GUI;
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.sqlite.SQLiteReader;
-import com.geertjankuip.sqlite.SQLiteWriter;
-import com.geertjankuip.texthandling.*;
+import main.java.com.geertjankuip.gui.GUI;
+import main.java.com.geertjankuip.logging.ActivityLogger;
+import main.java.com.geertjankuip.sqlite.SQLiteReader;
+import main.java.com.geertjankuip.texthandling.*;
 
 import javax.swing.*;
 import javax.swing.text.DefaultStyledDocument;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 
 public class WorkerSetJTextPaneFromDB extends SwingWorker<String, String> {
 
@@ -50,6 +50,4 @@ public class WorkerSetJTextPaneFromDB extends SwingWorker<String, String> {
 
         return "";
     }
-
-
 }

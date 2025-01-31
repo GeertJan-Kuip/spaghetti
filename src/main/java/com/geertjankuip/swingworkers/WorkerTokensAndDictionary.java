@@ -1,18 +1,17 @@
-package com.geertjankuip.swingworkers;
+package main.java.com.geertjankuip.swingworkers;
 
-import com.geertjankuip.gui.Controller;
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.sqlite.SQLiteWriter;
-import com.geertjankuip.texthandling.DirectoryReader;
-import com.geertjankuip.texthandling.FileDataContainer;
-import com.geertjankuip.texthandling.TextDataContainer;
-import com.geertjankuip.texthandling.TextHandler;
+import main.java.com.geertjankuip.gui.Controller;
+import main.java.com.geertjankuip.logging.ActivityLogger;
+import main.java.com.geertjankuip.sqlite.SQLiteWriter;
+import main.java.com.geertjankuip.texthandling.DirectoryReader;
+import main.java.com.geertjankuip.texthandling.FileDataContainer;
+import main.java.com.geertjankuip.texthandling.TextDataContainer;
+import main.java.com.geertjankuip.texthandling.TextHandler;
 
 import javax.swing.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import static java.lang.Thread.sleep;
 
 public class WorkerTokensAndDictionary extends SwingWorker<String, String> {
 
@@ -26,7 +25,6 @@ public class WorkerTokensAndDictionary extends SwingWorker<String, String> {
         this.directoryReader = directoryReader;
         this.controller = controller;
     }
-
 
     @Override
     protected String doInBackground() throws Exception {

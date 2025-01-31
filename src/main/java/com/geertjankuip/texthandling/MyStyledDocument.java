@@ -1,12 +1,14 @@
-package com.geertjankuip.texthandling;
+package main.java.com.geertjankuip.texthandling;
 
 import javax.swing.text.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+
 public class MyStyledDocument {
 
     public MyStyledDocument() {
+
     }
 
     public DefaultStyledDocument getDefaultStyledDocumentFromDB(ArrayList<TokenContainer> tokenData, String className) {

@@ -1,6 +1,6 @@
-package com.geertjankuip.graphics2dpanel;
+package main.java.com.geertjankuip.graphics2dpanel;
 
-import com.geertjankuip.gui.Controller;
+import main.java.com.geertjankuip.gui.Controller;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,7 +23,6 @@ public class Graphics2DPanel extends JPanel implements ActionListener, MouseList
     Color typeColor2 = new Color(133, 8, 8);
 
     float nodeDrawScaleFactor = 1.0F;
-    int startDisMultiplier = 2;
 
     int graphics2DPanelWidth;
     int graphics2DPanelHeight;
@@ -75,7 +74,6 @@ public class Graphics2DPanel extends JPanel implements ActionListener, MouseList
             new ConnectionDrawing(index, arrows, g2D,nodes,j,nodeDrawScaleFactor,nodeDrawWidth,nodeDrawHeight,nodeColor);
             index = index+1;
         }
-
     }
 
     @Override
@@ -107,7 +105,6 @@ public class Graphics2DPanel extends JPanel implements ActionListener, MouseList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        //System.out.println("Mouse Pressed");
         t.start();
         closeNode = (NodeObject) graphics2DCalculations.getNearestNode(e.getX() - graphics2DPanelWidth /2, e.getY() - graphics2DPanelHeight /2).get(0);
     }
@@ -119,12 +116,11 @@ public class Graphics2DPanel extends JPanel implements ActionListener, MouseList
 
     @Override
     public void mouseEntered(MouseEvent e) {
-//        System.out.println("Mouse Entered");
+
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-//        System.out.println("Mouse Exited");
         t.stop();
     }
 
@@ -132,8 +128,6 @@ public class Graphics2DPanel extends JPanel implements ActionListener, MouseList
     public void mouseDragged(MouseEvent e) {
         closeNode.x = e.getX()- graphics2DPanelWidth /2;
         closeNode.y = e.getY()- graphics2DPanelHeight /2;
-
-
     }
 
     @Override

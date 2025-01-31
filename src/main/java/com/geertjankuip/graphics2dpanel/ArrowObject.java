@@ -1,4 +1,4 @@
-package com.geertjankuip.graphics2dpanel;
+package main.java.com.geertjankuip.graphics2dpanel;
 
 import java.awt.geom.Point2D;
 

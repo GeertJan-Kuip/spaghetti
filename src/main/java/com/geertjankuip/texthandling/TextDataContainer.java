@@ -1,6 +1,7 @@
-package com.geertjankuip.texthandling;
+package main.java.com.geertjankuip.texthandling;
 
 import java.util.ArrayList;
+
 
 public class TextDataContainer {
 
@@ -26,6 +27,4 @@ public class TextDataContainer {
 
         return (path);
     }
-
-
 }

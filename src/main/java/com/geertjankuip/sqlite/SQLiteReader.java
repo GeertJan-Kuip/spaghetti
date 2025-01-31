@@ -1,9 +1,8 @@
-package com.geertjankuip.sqlite;
+package main.java.com.geertjankuip.sqlite;
 
-import com.geertjankuip.graphics2dpanel.ClassContainerGraphics;
-import com.geertjankuip.logging.ActivityLogger;
-import com.geertjankuip.logging.MyLogger;
-import com.geertjankuip.texthandling.TokenContainer;
+import main.java.com.geertjankuip.graphics2dpanel.ClassContainerGraphics;
+import main.java.com.geertjankuip.logging.ActivityLogger;
+import main.java.com.geertjankuip.texthandling.TokenContainer;
 
 import javax.swing.*;
 import java.sql.*;
@@ -43,8 +42,6 @@ public class SQLiteReader {
     ResultSet resultSet = statement.executeQuery(query);
     connection.commit();
 
-//        SQLitePrint.print(resultSet,100);
-
     while (resultSet.next()){
 
         int line = resultSet.getInt("line");
@@ -60,7 +57,6 @@ public class SQLiteReader {
     resultSet.close();
     closeDB();
 
-
     return(returnArray);
 }
 
@@ -75,8 +71,6 @@ public class SQLiteReader {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
 
-
-
         while (resultSet.next()) {
 
             returnedClassName = resultSet.getString("representation");
@@ -87,9 +81,7 @@ public class SQLiteReader {
         closeDB();
 
         return(returnedClassName);
-
     }
-
 
     public ArrayList<ClassContainer> getClassList() {
         return(classList);
@@ -153,7 +145,6 @@ public class SQLiteReader {
         strb.append("</table>");
         str = strb.toString();
 
-
         closeDB();
         return str;
     }
@@ -212,6 +203,7 @@ public class SQLiteReader {
                 logger.logAction("Class relations written to table");
             }
         });
+
         closeDB();
     }
 
@@ -256,7 +248,6 @@ public class SQLiteReader {
                     c.token_id_end = resultSet1.getInt("id");
                     break;
                 }
-
             }
 
             resultSet1.close();
@@ -282,13 +273,13 @@ public class SQLiteReader {
                 }
             }
         }
+
         closeDB();
     }
 
     public void getClasses() throws SQLException {
 
         connectDB();
-
 
         String query1 = """ 
                 SELECT id, token, place, line, file, representation FROM 
@@ -307,7 +298,6 @@ public class SQLiteReader {
                 )
                 WHERE prevRepresentation = 'class' 
                 """;
-
 
         Statement statement1 = connection.createStatement();
         ResultSet resultSet1 = statement1.executeQuery(query1);
@@ -364,7 +354,6 @@ public class SQLiteReader {
             String c = res.getString("representation");
             int d = res.getInt("maxlines");
 
-            //
             ClassContainerGraphics cc = new ClassContainerGraphics(idOneBased-1, b, c, d);
             returnArray.add(cc);
         }
@@ -400,6 +389,5 @@ public class SQLiteReader {
 
         return(returnSet);
     }
-
 }
 

@@ -1,4 +1,4 @@
-package com.geertjankuip.logging;
+package main.java.com.geertjankuip.logging;
 
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
@@ -7,7 +7,6 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import java.awt.*;
 
-import static java.lang.Thread.sleep;
 
 public class MyLogger implements ActivityLogger{
 

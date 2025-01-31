@@ -1,4 +1,4 @@
-package com.geertjankuip.sqlite;
+package main.java.com.geertjankuip.sqlite;
 
 public class ClassContainer {
 
