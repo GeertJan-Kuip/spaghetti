@@ -96,8 +96,8 @@ public class Graphics2DPanel extends JPanel implements ActionListener, MouseList
         }else if (nearest == "Arrow"){
             System.out.println("An Arrow was returned");
             System.out.println("It connects classes " + closeArrow.class1Name + " and " + closeArrow.class1Name);
-            controller.setJTextPaneFromDB(closeArrow.class2+1, "Top");
-            controller.setJTextPaneFromDB(closeArrow.class1+1, "Bottom");
+            controller.setJTextPaneFromDB(closeArrow.class2+1, closeArrow.class1+1,"Top");
+            controller.setJTextPaneFromDB(closeArrow.class1+1, closeArrow.class2+1, "Bottom");
         }else {
             System.out.println("Don't know what the return value was but not null, Node or Arrow");
         }

@@ -15,14 +15,16 @@ public class WorkerSetJTextPaneFromDB extends SwingWorker<String, String> {
 
     GUI gui;
     ActivityLogger logger;
-    int classID;
+    int classID1;
+    int classID2;
     String whichPanel;
 
-    public WorkerSetJTextPaneFromDB(GUI gui, ActivityLogger log, int classID, String whichPanel){
+    public WorkerSetJTextPaneFromDB(GUI gui, ActivityLogger log, int classID1, int classID2, String whichPanel){
 
         this.gui = gui;
         this.logger = logger;
-        this.classID = classID;
+        this.classID1 = classID1;
+        this.classID2 = classID2;
         this.whichPanel = whichPanel;
     }
 
@@ -32,11 +34,15 @@ public class WorkerSetJTextPaneFromDB extends SwingWorker<String, String> {
         SQLiteReader sql2 = new SQLiteReader(logger);
 
         ArrayList<TokenContainer> tokens = null;
-        String className = null;
+        String className1 = null;
+        String className2 = null;
+
 
         try {
-            tokens = sql2.getFileAsTokens(classID);
-            className = sql2.getClassName(classID);
+            tokens = sql2.getFileAsTokens(classID1);
+            className1 = sql2.getClassName(classID1);
+            className2 = sql2.getClassName(classID2);
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -44,7 +50,7 @@ public class WorkerSetJTextPaneFromDB extends SwingWorker<String, String> {
         if (tokens!=null) {
             MyStyledDocument myStyledDocument = new MyStyledDocument();
 
-            DefaultStyledDocument doc = myStyledDocument.getDefaultStyledDocumentFromDB(tokens, className);
+            DefaultStyledDocument doc = myStyledDocument.getDefaultStyledDocumentFromDB(tokens, className1, className2, whichPanel);
             gui.setJTextPane(doc, whichPanel);
         }
 

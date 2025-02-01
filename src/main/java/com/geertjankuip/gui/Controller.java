@@ -60,8 +60,8 @@ public class Controller {
                 startGraphicsPanel();
                 break;
             case "howItem":
-                setJTextPaneFromDB(1, "Top");
-                setJTextPaneFromDB(2, "Bottom");
+                setJTextPaneFromDB(1, 2,"Top");
+                setJTextPaneFromDB(2, 1, "Bottom");
                 break;
             case "aboutItem":
                 logger.logAction("This is the logger");
@@ -119,8 +119,8 @@ public class Controller {
 
     }
 
-    public void setJTextPaneFromDB(int classID, String whichPanel){
+    public void setJTextPaneFromDB(int classID1, int classID2, String whichPanel){
 
-        (new WorkerSetJTextPaneFromDB(gui, logger, classID, whichPanel)).execute();
+            (new WorkerSetJTextPaneFromDB(gui, logger, classID1, classID2, whichPanel)).execute();
     }
 }

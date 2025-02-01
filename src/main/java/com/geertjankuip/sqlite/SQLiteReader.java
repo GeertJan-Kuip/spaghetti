@@ -290,13 +290,13 @@ public class SQLiteReader {
                     FROM tokens INNER JOIN dictionary ON tokens.token = dictionary.id 
                     WHERE (file, line) IN 
                         (
-                        SELECT file, line FROM tokens WHERE token=
+                        SELECT file, line FROM tokens WHERE token IN 
                             (
-                            SELECT id FROM DICTIONARY WHERE representation='class'
+                            SELECT id FROM DICTIONARY WHERE (representation='class' or representation='interface') 
                             )
                         )
                 )
-                WHERE prevRepresentation = 'class' 
+                WHERE (prevRepresentation = 'class' OR prevRepresentation = 'interface') 
                 """;
 
         Statement statement1 = connection.createStatement();

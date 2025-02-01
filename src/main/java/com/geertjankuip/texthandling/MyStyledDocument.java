@@ -11,11 +11,12 @@ public class MyStyledDocument {
 
     }
 
-    public DefaultStyledDocument getDefaultStyledDocumentFromDB(ArrayList<TokenContainer> tokenData, String className) {
+    public DefaultStyledDocument getDefaultStyledDocumentFromDB(ArrayList<TokenContainer> tokenData, String className1, String className2, String whichPanel) {
 
         StringBuilder text = new StringBuilder();
 
         StringBuilder tokenStringBuilder = new StringBuilder();
+
 
         int linePrev = 10;
 
@@ -28,13 +29,17 @@ public class MyStyledDocument {
 
         SimpleAttributeSet black = new SimpleAttributeSet();
         StyleConstants.setFontFamily(black, "Consolas");
-        StyleConstants.setFontSize(black, 16);
-        StyleConstants.setLineSpacing(black, 1.0F);
+        StyleConstants.setFontSize(black, 14);
+        StyleConstants.setLineSpacing(black, 1.2F);
         StyleConstants.setForeground(black, new Color(30,30,30));
 
         SimpleAttributeSet red = new SimpleAttributeSet(black);
         StyleConstants.setBold(red, true);
-        StyleConstants.setForeground(red, new Color(220,30,20));
+        StyleConstants.setForeground(red, new Color(222, 31, 18));
+
+        SimpleAttributeSet green = new SimpleAttributeSet(black);
+        StyleConstants.setBold(green, true);
+        StyleConstants.setForeground(green, new Color(109, 5, 161));
 
 
         for (TokenContainer t : tokenData) {
@@ -71,11 +76,18 @@ public class MyStyledDocument {
 
             try {
                 String trimmed = (t.representation).trim();
-                if (trimmed.equals(className)) {
+                if (trimmed.equals(className1) && whichPanel=="Top") {
+                    doc.insertString(doc.getLength(), tokenAsString, red);
+                }else if (trimmed.equals(className1) && whichPanel=="Bottom") {
+                    doc.insertString(doc.getLength(), tokenAsString, green);
+                }else if (trimmed.equals(className2) && whichPanel=="Top"){
+                    doc.insertString(doc.getLength(), tokenAsString, green);
+                }else if(trimmed.equals(className2) && whichPanel=="Bottom"){
                     doc.insertString(doc.getLength(), tokenAsString, red);
                 }else{
                     doc.insertString(doc.getLength(), tokenAsString, black);
                 }
+
             } catch (BadLocationException e) {
                 throw new RuntimeException(e);
             }
