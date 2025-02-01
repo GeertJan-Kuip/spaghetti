@@ -1,6 +1,7 @@
 package main.java.com.geertjankuip.gui;
 
 import main.java.com.geertjankuip.logging.MyLogger;
+import main.java.com.geertjankuip.utilities.MarkdownToStyledDocument;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,7 +21,6 @@ public class GUI implements ActionListener{
     private JMenu graphMenu;
     private JMenu dbMenu;
     private JMenu helpMenu;
-    private JMenuItem loadGitItem;
     private JMenuItem loadSrcFolderItem;
     private JMenuItem settingsItem;
     private JMenuItem showDBItem;
@@ -48,6 +48,7 @@ public class GUI implements ActionListener{
 
     private JScrollPane myJScrollPaneTopLeft;
     private JScrollPane myJScrollPaneBottomLeft;
+    private JScrollPane myJScrollPaneTopRight;
     private JScrollPane myJScrollPaneBottomRight;
 
     public JPanel myJPanelCardsTopRight;
@@ -59,6 +60,7 @@ public class GUI implements ActionListener{
 
     private JTextPane myTextPaneTopLeft;
     private JTextPane myTextPaneBottomLeft;
+    private JTextPane myTextPaneTopRight;
     private JTextPane myTextPaneBottomRight;
 
     private JPanel myHackPaneTopLeft;
@@ -93,6 +95,8 @@ public class GUI implements ActionListener{
         mySplitPaneLeft.setDividerLocation(0.5);
         mySplitPaneRight.setDividerLocation(0.9);
 
+        setAboutPanel(MarkdownToStyledDocument.readMarkDownFile());
+
         myFrame.setVisible(true);
 
         logger = new MyLogger(myTextPaneBottomRight);
@@ -121,7 +125,6 @@ public class GUI implements ActionListener{
         myMenuBar.add(dbMenu);
         myMenuBar.add(graphMenu);
         myMenuBar.add(helpMenu);
-        loadGitItem = new JMenuItem("Load .git folder");
         loadSrcFolderItem = new JMenuItem("Load project folder");
         settingsItem = new JMenuItem("Settings");
         showDBItem = new JMenuItem("Show database");
@@ -130,7 +133,6 @@ public class GUI implements ActionListener{
         howItem = new JMenuItem("How it works");
         aboutItem = new JMenuItem("About");
 
-        loadGitItem.setName("loadGitItem");
         loadSrcFolderItem.setName("loadSrcFolderItem");
         settingsItem.setName("settingsItem");
         showDBItem.setName("showDBItem");
@@ -138,7 +140,6 @@ public class GUI implements ActionListener{
         showGraphItem.setName("showGraphItem");
         howItem.setName("howItem");
         aboutItem.setName("aboutItem");
-        fileMenu.add(loadGitItem);
         fileMenu.add(loadSrcFolderItem);
         fileMenu.add(settingsItem);
         dbMenu.add(showDBItem);
@@ -146,6 +147,11 @@ public class GUI implements ActionListener{
         graphMenu.add(showGraphItem);
         helpMenu.add(howItem);
         helpMenu.add(aboutItem);
+
+        settingsItem.setEnabled(false);
+        showDBItem.setEnabled(false);
+        clearDBItem.setEnabled(false);
+        howItem.setEnabled(false);
     }
 
     private void constructTopStripWithButtons() {
@@ -166,6 +172,8 @@ public class GUI implements ActionListener{
         myButton04.setName("Reset_Animation");
         myTopStrip.add(myButton04);
 
+
+        myButton01.setEnabled(false);
         myButton02.setEnabled(false);
         myButton03.setEnabled(false);
         myButton04.setEnabled(false);
@@ -224,9 +232,6 @@ public class GUI implements ActionListener{
         myTextPaneBottomRight = new JTextPane();
         myTextPaneBottomRight.setBorder(new EmptyBorder(20, 20, 20, 20));
 
-        myTextPaneTopLeft.setText("This is the upper left textfield");
-        myTextPaneBottomLeft.setText("This is the lower left textfield");
-
         // to prevent line wrapping, an additional panel is placed between JScrollPane and JTextPane
         myHackPaneTopLeft = new JPanel(new BorderLayout());
         myHackPaneTopLeft.add(myTextPaneTopLeft, BorderLayout.CENTER);
@@ -237,7 +242,8 @@ public class GUI implements ActionListener{
 
         // top right: card layout
         myJPanelCardsTopRight = new JPanel(new CardLayout());
-        myJPanelCard1 = new JPanel();
+        myJPanelCard1 = new JPanel(new BorderLayout());
+
         myJPanelCard2 = new JPanel();
         myJPanelCard3 = new JPanel(new BorderLayout());
 
@@ -250,9 +256,10 @@ public class GUI implements ActionListener{
         myJPanelCard3.setBackground(new Color(200,200,250));
 
         myReadMePanel = new JTextPane();
-        myReadMePanel.setBorder(new EmptyBorder(50, 50, 20, 50));
+        myJScrollPaneTopRight = new JScrollPane(myReadMePanel);
+        myReadMePanel.setBorder(new EmptyBorder(50, 70, 20, 50));
         myJPanelCard1.setLayout(new BorderLayout());
-        myJPanelCard1.add(myReadMePanel, BorderLayout.CENTER);
+        myJPanelCard1.add(myJScrollPaneTopRight, BorderLayout.CENTER);
 
         CardLayout cl = (CardLayout)(myJPanelCardsTopRight.getLayout());
 
@@ -287,7 +294,6 @@ public class GUI implements ActionListener{
 
     private void setActionListeners() {
 
-        loadGitItem.addActionListener(this);
         loadSrcFolderItem.addActionListener(this);
         settingsItem.addActionListener(this);
         showDBItem.addActionListener(this);
@@ -295,13 +301,6 @@ public class GUI implements ActionListener{
         showGraphItem.addActionListener(this);
         howItem.addActionListener(this);
         aboutItem.addActionListener(this);
-
-        myButton01.addActionListener(this);
-        myButton02.addActionListener(this);
-        myButton03.addActionListener(this);
-        myButton04.addActionListener(this);
-
-        myButton31.addActionListener(this);
     }
 
 
@@ -334,6 +333,12 @@ public class GUI implements ActionListener{
         CardLayout cl = (CardLayout)(myJPanelCardsTopRight.getLayout());
         cl.show(myJPanelCardsTopRight, "cardGraphics");
         myJPanelCard3.add(myGraphicsPanel, BorderLayout.CENTER);
+    }
+
+    public void setAboutPanel(DefaultStyledDocument doc){
+        CardLayout cl = (CardLayout)(myJPanelCardsTopRight.getLayout());
+        cl.show(myJPanelCardsTopRight, "cardReadMe");
+        myReadMePanel.setStyledDocument(doc);
     }
 
     public void showWarning(String str) {

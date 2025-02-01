@@ -19,13 +19,13 @@ public class MarkdownToStyledDocument {
         DefaultStyledDocument doc = new DefaultStyledDocument();
 
         SimpleAttributeSet regularFont = new SimpleAttributeSet();
-        StyleConstants.setFontFamily(regularFont, "sans-serif");
+        StyleConstants.setFontFamily(regularFont, "consolas");
         StyleConstants.setFontSize(regularFont, 16);
         StyleConstants.setLineSpacing(regularFont, 1.0F);
         StyleConstants.setForeground(regularFont, new Color(30,30,30));
 
         SimpleAttributeSet headerFont = new SimpleAttributeSet(regularFont);
-        StyleConstants.setFontFamily(headerFont, "serif");
+        StyleConstants.setFontFamily(headerFont, "consolas");
         StyleConstants.setFontSize(headerFont, 24);
         StyleConstants.setBold(headerFont, true);
         StyleConstants.setForeground(headerFont, new Color(10,10,10));

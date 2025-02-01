@@ -39,20 +39,12 @@ public class Controller {
 
         switch(componentName) {
 
-            case "loadGitItem":
-                gui.setJTextPane(MarkdownToStyledDocument.readMarkDownFile(), "Top");
-                break;
             case "loadSrcFolderItem":
                 deleteDataBase();
                 getFilesFoldersTokensAndDictionary();
                 break;
             case "settingsItem":
-                gui.setJTextPane(MarkdownToStyledDocument.readMarkDownFile(), "TopRight");
-                break;
             case "showDBItem":
-                SQLiteReader sql2 = new SQLiteReader(logger);
-                String res = sql2.getFilesTableHTML();
-                this.gui.setJTextPaneHTML(res);
                 break;
             case "clearDBItem":
                 break;
@@ -60,11 +52,9 @@ public class Controller {
                 startGraphicsPanel();
                 break;
             case "howItem":
-                setJTextPaneFromDB(1, 2,"Top");
-                setJTextPaneFromDB(2, 1, "Bottom");
                 break;
             case "aboutItem":
-                logger.logAction("This is the logger");
+                gui.setAboutPanel(MarkdownToStyledDocument.readMarkDownFile());
                 break;
             case "switch_card":
                 CardLayout cl = (CardLayout)(gui.myJPanelCardsTopRight.getLayout());

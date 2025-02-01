@@ -4,7 +4,7 @@ This is a pet project that I developed to learn Java. It reads a Java codebase, 
 
 ### Getting started
 
-To get started with the program, go to File->Load Directory and select a folder containing a Java project. When loading is done, select Graph->Draw Network Graph to create a 'spaghetti' drawing that is based on the code. The nodes of the graph can be dragged to untangle the spaghetti somewhat. By clicking on a node you will see its code in the upper right panel. Clicking on the arrow on the middle of the connecting line will give you the code of the two objects connected by that line.
+To get started with the program, go to File->Load Directory and select a folder containing a Java project. When loading is done, select Graphics->Draw Network Graph to create a 'spaghetti' drawing that is based on the code. The nodes of the graph can be dragged to untangle the spaghetti. By clicking on a node you will see its code in the upper right panel. Clicking on the arrow on the middle of the connecting line will give you the code of the two objects connected by that line.
 
 ### Caveats
 
