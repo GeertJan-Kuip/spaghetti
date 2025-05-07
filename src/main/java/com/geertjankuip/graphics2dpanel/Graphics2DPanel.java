@@ -1,6 +1,6 @@
-package main.java.com.geertjankuip.graphics2dpanel;
+package com.geertjankuip.graphics2dpanel;
 
-import main.java.com.geertjankuip.gui.Controller;
+import com.geertjankuip.gui.Controller;
 
 import javax.swing.*;
 import java.awt.*;

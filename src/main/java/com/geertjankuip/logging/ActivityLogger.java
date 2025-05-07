@@ -1,4 +1,4 @@
-package main.java.com.geertjankuip.logging;
+package com.geertjankuip.logging;
 
 public interface ActivityLogger {
 

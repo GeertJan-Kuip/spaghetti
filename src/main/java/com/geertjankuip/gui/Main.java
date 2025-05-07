@@ -1,6 +1,6 @@
-package main.java.com.geertjankuip;
+package com.geertjankuip.gui;
 
-import main.java.com.geertjankuip.gui.GUI;
+
 
 public class Main {
 

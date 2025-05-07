@@ -1,7 +1,7 @@
-package main.java.com.geertjankuip.gui;
+package com.geertjankuip.gui;
 
-import main.java.com.geertjankuip.logging.MyLogger;
-import main.java.com.geertjankuip.utilities.MarkdownToStyledDocument;
+import com.geertjankuip.logging.MyLogger;
+import com.geertjankuip.utilities.MarkdownToStyledDocument;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

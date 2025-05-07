@@ -1,18 +1,18 @@
-package main.java.com.geertjankuip.gui;
+package com.geertjankuip.gui;
 
-import main.java.com.geertjankuip.graphics2dpanel.ArrowObject;
-import main.java.com.geertjankuip.graphics2dpanel.Graphics2DCalculations;
-import main.java.com.geertjankuip.graphics2dpanel.Graphics2DPanel;
-import main.java.com.geertjankuip.graphics2dpanel.NodeObject;
-import main.java.com.geertjankuip.logging.ActivityLogger;
-import main.java.com.geertjankuip.sqlite.SQLiteReader;
+import com.geertjankuip.graphics2dpanel.ArrowObject;
+import com.geertjankuip.graphics2dpanel.Graphics2DCalculations;
+import com.geertjankuip.graphics2dpanel.Graphics2DPanel;
+import com.geertjankuip.graphics2dpanel.NodeObject;
+import com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.sqlite.SQLiteReader;
 
-import main.java.com.geertjankuip.swingworkers.WorkerClassData;
-import main.java.com.geertjankuip.swingworkers.WorkerGraphics2DPanel;
-import main.java.com.geertjankuip.swingworkers.WorkerSetJTextPaneFromDB;
-import main.java.com.geertjankuip.swingworkers.WorkerTokensAndDictionary;
-import main.java.com.geertjankuip.texthandling.*;
-import main.java.com.geertjankuip.utilities.MarkdownToStyledDocument;
+import com.geertjankuip.swingworkers.WorkerClassData;
+import com.geertjankuip.swingworkers.WorkerGraphics2DPanel;
+import com.geertjankuip.swingworkers.WorkerSetJTextPaneFromDB;
+import com.geertjankuip.swingworkers.WorkerTokensAndDictionary;
+import com.geertjankuip.texthandling.*;
+import com.geertjankuip.utilities.MarkdownToStyledDocument;
 
 import javax.swing.*;
 import java.awt.*;

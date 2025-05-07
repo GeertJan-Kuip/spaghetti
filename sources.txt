@@ -1,0 +1,8 @@
+src/main/java/com/geertjankuip/graphics2dpanel/*.java
+src/main/java/com/geertjankuip/gui/*.java
+src/main/java/com/geertjankuip/logging/*.java
+src/main/java/com/geertjankuip/sqlite/*.java
+src/main/java/com/geertjankuip/swingworkers/*.java
+src/main/java/com/geertjankuip/texthandling/*.java
+src/main/java/com/geertjankuip/utilities/*.java
+

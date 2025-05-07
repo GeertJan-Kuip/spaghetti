@@ -1,9 +1,9 @@
-package main.java.com.geertjankuip.swingworkers;
+package com.geertjankuip.swingworkers;
 
-import main.java.com.geertjankuip.gui.GUI;
-import main.java.com.geertjankuip.logging.ActivityLogger;
-import main.java.com.geertjankuip.sqlite.SQLiteReader;
-import main.java.com.geertjankuip.texthandling.*;
+import com.geertjankuip.gui.GUI;
+import com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.sqlite.SQLiteReader;
+import com.geertjankuip.texthandling.*;
 
 import javax.swing.*;
 import javax.swing.text.DefaultStyledDocument;

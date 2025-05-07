@@ -1,10 +1,10 @@
-package main.java.com.geertjankuip.swingworkers;
+package com.geertjankuip.swingworkers;
 
-import main.java.com.geertjankuip.graphics2dpanel.ArrowObject;
-import main.java.com.geertjankuip.graphics2dpanel.Graphics2DCalculations;
-import main.java.com.geertjankuip.graphics2dpanel.NodeObject;
-import main.java.com.geertjankuip.gui.Controller;
-import main.java.com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.graphics2dpanel.ArrowObject;
+import com.geertjankuip.graphics2dpanel.Graphics2DCalculations;
+import com.geertjankuip.graphics2dpanel.NodeObject;
+import com.geertjankuip.gui.Controller;
+import com.geertjankuip.logging.ActivityLogger;
 
 import javax.swing.*;
 import java.util.ArrayList;

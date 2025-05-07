@@ -1,4 +1,4 @@
-package main.java.com.geertjankuip.utilities;
+package com.geertjankuip.utilities;
 
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultStyledDocument;

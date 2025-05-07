@@ -1,4 +1,4 @@
-package main.java.com.geertjankuip.texthandling;
+package com.geertjankuip.texthandling;
 
 import java.io.File;
 

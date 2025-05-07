@@ -1,8 +1,8 @@
-package main.java.com.geertjankuip.sqlite;
+package com.geertjankuip.sqlite;
 
-import main.java.com.geertjankuip.logging.ActivityLogger;
-import main.java.com.geertjankuip.texthandling.FileDataContainer;
-import main.java.com.geertjankuip.texthandling.TextDataContainer;
+import com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.texthandling.FileDataContainer;
+import com.geertjankuip.texthandling.TextDataContainer;
 
 import javax.swing.*;
 import java.sql.*;

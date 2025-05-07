@@ -1,4 +1,4 @@
-package main.java.com.geertjankuip.graphics2dpanel;
+package com.geertjankuip.graphics2dpanel;
 
 public class ClassContainerGraphics {
 

@@ -1,9 +1,9 @@
-package main.java.com.geertjankuip.swingworkers;
+package com.geertjankuip.swingworkers;
 
-import main.java.com.geertjankuip.logging.ActivityLogger;
-import main.java.com.geertjankuip.sqlite.ClassContainer;
-import main.java.com.geertjankuip.sqlite.SQLiteReader;
-import main.java.com.geertjankuip.sqlite.SQLiteWriter;
+import com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.sqlite.ClassContainer;
+import com.geertjankuip.sqlite.SQLiteReader;
+import com.geertjankuip.sqlite.SQLiteWriter;
 
 import javax.swing.*;
 import java.sql.SQLException;

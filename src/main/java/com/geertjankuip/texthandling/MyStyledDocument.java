@@ -1,4 +1,4 @@
-package main.java.com.geertjankuip.texthandling;
+package com.geertjankuip.texthandling;
 
 import javax.swing.text.*;
 import java.awt.*;

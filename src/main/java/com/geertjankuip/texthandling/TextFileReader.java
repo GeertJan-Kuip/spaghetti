@@ -1,6 +1,6 @@
-package main.java.com.geertjankuip.texthandling;
+package com.geertjankuip.texthandling;
 
-import main.java.com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.logging.ActivityLogger;
 
 import javax.swing.*;
 import java.io.BufferedReader;

@@ -1,7 +1,7 @@
-package main.java.com.geertjankuip.graphics2dpanel;
+package com.geertjankuip.graphics2dpanel;
 
-import main.java.com.geertjankuip.logging.ActivityLogger;
-import main.java.com.geertjankuip.sqlite.SQLiteReader;
+import com.geertjankuip.logging.ActivityLogger;
+import com.geertjankuip.sqlite.SQLiteReader;
 
 import java.awt.geom.Point2D;
 import java.sql.SQLException;
