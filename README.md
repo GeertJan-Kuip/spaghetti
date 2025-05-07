@@ -1,5 +1,7 @@
 ## About this project
 
+*Note:* this was my first project, it doesn't run properly outside my own Intellij environment.
+
 This is a pet project that I developed to learn Java. It reads a Java codebase, analyses it and draws a network graph. The nodes in this graph represent the classes and interfaces found in the code, the lines represent invocations of one class of another class.
 
 ### Getting started
